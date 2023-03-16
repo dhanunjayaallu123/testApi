@@ -1,0 +1,18 @@
+pipeline {
+ agent any
+ tools {
+ maven "Maven"
+ }
+ stages{
+ stage('git clone url'){
+ steps{ 
+ git 'https://github.com/Gopikrishna7842/testApi.git'
+ }
+ }
+ stage('buid'){
+ steps{
+ bat 'mvn clean'
+ }
+ }
+ }
+ }
