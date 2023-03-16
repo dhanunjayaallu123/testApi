@@ -6,7 +6,7 @@ pipeline {
  stages{
  stage('git clone url'){
  steps{ 
- git 'https://github.com/Gopikrishna7842/testApi.git'
+ git branch: 'patch-1', url: 'https://github.com/dhanunjayaallu123/testApi.git'
  }
  }
  stage('buid'){
