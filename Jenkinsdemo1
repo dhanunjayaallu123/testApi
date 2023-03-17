@@ -26,7 +26,7 @@ bat 'mvn clean'
 }
 stage('jar file jenerate'){
 steps{
-bat 'mvn package'
+bat 'mvn test'
 }
 }
 }
