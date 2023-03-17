@@ -11,7 +11,7 @@ bat 'mvn --version'
 }
 stage( 'git cloning'){
 steps{
-git branch: 'master', url: 'https://github.com/dhanunjayaallu123/testApi.git'
+git branch: 'main', url: 'https://github.com/dhanunjayaallu123/testApi.git'
 }
 }
 stage('mvn build'){
