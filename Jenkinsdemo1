@@ -1,0 +1,28 @@
+pipeline {
+agent any
+tools{
+maven "Maven"
+}
+stages{
+stage( 'initialize mvn versionn'){
+steps{
+bat 'mvn --version'
+}
+}
+stage( 'git cloning'){
+steps{
+git branch: 'master', url: 'https://github.com/dhanunjayaallu123/testApi.git'
+}
+}
+stage('mvn build'){
+steps{
+bat 'mvn compile'
+}
+}
+stage('jenerate jar file'){
+steps{
+bat 'mvn clean package'
+}
+}
+}
+]
