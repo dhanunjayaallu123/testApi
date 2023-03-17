@@ -4,7 +4,7 @@ tools{
 maven "Maven"
 }
 stages{
-stage( 'initialize mvn versionn'){
+stage('initialize mvn versionn'){
 steps{
 bat 'mvn --version'
 }
@@ -25,4 +25,4 @@ bat 'mvn clean package'
 }
 }
 }
-
+}
